@@ -1,0 +1,29 @@
+<div class="d-flex flex-column justify-content-center w-100 h-100">
+  <h1>4 PICS 1 WORD</h1>
+
+  <div class="game">
+    <div class="imgMainContainer">
+      <div class="imgSubContainer">
+        <img *ngFor="let url of imageUrls1" [src]="url" [ngClass]="'imgs1'" />
+      </div>
+      <div class="imgSubContainer">
+        <img *ngFor="let url of imageUrls2" [src]="url" [ngClass]="'imgs2'" />
+      </div>
+    </div>
+    <form (ngSubmit)="checkGuess()" class="formContainer">
+      <input
+        type="text"
+        md-maxlength="30"
+        [(ngModel)]="userGuess"
+        (keydown)="checkAnswer($event)"
+        name="userGuess"
+        autocomplete="off"
+        class="inputText"
+      />
+      <button type="text" (click)="checkGuess()">Submit</button>
+      <!-- <div>
+        <a href="#" class="btn btn-white btn-animate" type="submit">Submit</a>
+      </div> -->
+    </form>
+  </div>
+</div>
