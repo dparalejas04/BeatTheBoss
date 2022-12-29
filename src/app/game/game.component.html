@@ -1,6 +1,10 @@
 <div class="d-flex flex-column justify-content-center w-100 h-100">
-  <h1>4 PICS 1 WORD</h1>
-
+  <!-- <h1>4 PICS 1 WORD</h1> -->
+  <h1 class="c2">
+    <span class="text-wrapper">
+      <span class="letters">4 PICS 1 WORD</span>
+    </span>
+  </h1>
   <div class="game">
     <div class="imgMainContainer">
       <div class="imgSubContainer">
@@ -9,6 +13,17 @@
       <div class="imgSubContainer">
         <img *ngFor="let url of imageUrls2" [src]="url" [ngClass]="'imgs2'" />
       </div>
+    </div>
+    <div class="blank">
+      <p>_</p>
+      <p>_</p>
+      <p>_</p>
+      <p>_</p>
+      <p>_</p>
+      <p>_</p>
+      <p>_</p>
+      <p>_</p>
+      <p>_</p>
     </div>
     <form (ngSubmit)="checkGuess()" class="formContainer">
       <input
@@ -27,3 +42,5 @@
     </form>
   </div>
 </div>
+
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations -->

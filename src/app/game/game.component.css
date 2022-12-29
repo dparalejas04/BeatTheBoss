@@ -155,3 +155,15 @@ h1 {
     transform: translateY(0px);
   }
 } */
+
+p {
+  font-size: 50px;
+  font-weight: 200px;
+}
+
+.blank {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
